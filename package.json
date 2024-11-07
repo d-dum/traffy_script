@@ -1,0 +1,33 @@
+{
+  "name": "@traffy_tg/traffy_analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "uglifyjs index.js -o index.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-dum/traffy_script.git"
+  },
+  "keywords": [
+    "Traffy",
+    "analytics",
+    "script"
+  ],
+  "author": "d-dum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-dum/traffy_script/issues"
+  },
+  "homepage": "https://github.com/d-dum/traffy_script#readme",
+  "files": [
+    "umd",
+    "index.js",
+    "index.min.js",
+    "README.md"
+  ],
+  "devDependencies": {
+    "uglify-js": "^3.19.3"
+  }
+}
