@@ -1,5 +1,8 @@
 //@ts-check
 
+const currentScript = document.currentScript;
+
+
 /** @typedef {{id: number, type: string, title: string, username: string | undefined, photo_url: string | undefined}} WebAppChat */
 /** @typedef {{id: number, is_bot: boolean, first_name: string, last_name: string | undefined, username: string | undefined, language_code: string, is_premium: boolean | undefined, added_to_attachment_menu: boolean | undefined, allows_write_to_pm: boolean | undefined, photo_url: string | undefined}} WebAppUser */
 /** @typedef {{query_id: string | undefined, user: WebAppUser | undefined, receiver: WebAppUser | undefined, chat: WebAppChat | undefined, chat_type: string | undefined, chat_instance: string | undefined, start_param: string | undefined, can_send_after: number | undefined, auth_date: number, hash: string}} WebAppInitData */
@@ -42,7 +45,6 @@ async function metricMain(){
         return;
     }
 
-    const currentScript = document.currentScript;
     if(currentScript === null){
         // TODO: outside of browser environment
         return;
@@ -72,6 +74,7 @@ async function metricMain(){
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
+            mode: "no-cors",
             body: JSON.stringify(data)
         });
     } catch (error) {
